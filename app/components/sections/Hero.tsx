@@ -45,21 +45,21 @@ export default function Hero() {
             className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.02]"
           >
             <span className="text-white">
-              Convertí a tus hinchas en una
+            Transformá la pasión 
             </span>
             <br />
             <span className="text-[#FF2D55]">
-              fuente de ingresos
+            de tus hinchas
             </span>
             <br />
             <span className="text-white">
-              constante
+            en crecimiento real para tu club
             </span>
           </motion.h1>
 
           {/* SUB */}
           <p className="mt-6 text-lg text-white/70">
-            BigFana transforma la relación con tus fans en consumo, datos y monetización real.
+          Para el club que quiere crecer. Para el sponsor que quiere impacto. Para el fan que quiere más.
           </p>
 
           {/* CTA */}

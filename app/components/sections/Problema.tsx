@@ -13,23 +13,23 @@ import {
 const items = [
   {
     icon: Users,
-    title: "No conocés a tus fans",
-    text: "Sin datos reales, no podés segmentar ni monetizar.",
+    title: "Fans que el club no conoce",
+    text: "Sin datos propios, cada campaña empieza desde cero.",
   },
   {
     icon: BadgeDollarSign,
-    title: "Sponsors sin retorno",
-    text: "Difícil justificar inversión sin métricas concretas.",
+    title: "Sponsors con poca trazabilidad",
+    text: "Mucha exposición, poca medición del impacto real.",
   },
   {
     icon: Activity,
-    title: "Engagement sin ingresos",
-    text: "Hay interacción, pero no impacto económico.",
+    title: "Engagement que no escala",
+    text: "La pasión existe, pero se queda sin canalizar.",
   },
   {
     icon: TrendingDown,
-    title: "Ingresos limitados",
-    text: "Los modelos tradicionales ya tienen techo.",
+    title: "Ingresos con techo",
+    text: "Ticketing, merchandising y sponsors necesitan nuevas capas de crecimiento.",
   },
 ];
 
@@ -75,11 +75,11 @@ export default function Problema() {
 
             <h2 className="text-4xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-6">
               <span className="text-white">
-                Hoy los clubes están dejando
+                Siempre tuviste los fans.
               </span>
               <br />
               <span className="text-[#FF2D55]">
-                dinero sobre la mesa
+                Hoy podés hacer más con ellos.
               </span>
             </h2>
 

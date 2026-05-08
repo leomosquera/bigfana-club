@@ -13,17 +13,17 @@ const items = [
   {
     icon: Wallet,
     title: "Más consumo por fan",
-    text: "Convertí cada interacción en ingresos dentro del ecosistema del club.",
+    text: "Cada visita, cada compra, cada momento convertido en valor para el club.",
   },
   {
     icon: Database,
     title: "Datos propios y accionables",
-    text: "Conocé a cada fan y activalo con precisión en tiempo real.",
+    text: "Construí tu propio activo de datos y tomá decisiones basadas en comportamiento real.",
   },
   {
     icon: BadgeDollarSign,
     title: "Sponsors con ROI real",
-    text: "Activaciones medibles que generan valor comercial concreto.",
+    text: "Activaciones segmentadas según el comportamiento de cada hincha.",
   },
 ];
 
@@ -70,16 +70,16 @@ export default function Solucion() {
 
             <h2 className="text-4xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-6">
               <span className="text-white">
-                Una plataforma diseñada
+                Un ecosistema diseñado
               </span>
               <br />
               <span className="text-[#FF2D55]">
-                para generar ingresos
+                para todos
               </span>
             </h2>
 
             <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              BigFana conecta fans, consumo y sponsors en un único ecosistema.
+              BigFana transforma interacción, datos y comunidad en valor tangible para el club, los sponsors y los fans.
             </p>
 
           </div>

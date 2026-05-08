@@ -10,7 +10,7 @@ const leftItems = [
 ];
 
 const rightItems = [
-  "Monetización directa del fan",
+  "Más ingresos para el club, mejor experiencia para el fan",
   "Modelo simple, sin fricción",
   "Ecosistema integrado que genera valor",
 ];
@@ -27,7 +27,7 @@ export default function Diferencial() {
           </h2>
 
           <p className="text-white/60 text-lg">
-            BigFana está diseñado para generar ingresos reales, no solo interacción.
+            Diseñado para que cada interacción tenga un impacto real en el club.
           </p>
         </div>
 
