@@ -53,7 +53,7 @@ export default function Hero() {
             </span>
             <br />
             <span className="text-white">
-            en crecimiento real para tu club
+            en crecimiento real para tu club.
             </span>
           </motion.h1>
 

@@ -85,7 +85,7 @@ export default function Implementacion() {
               </span>
               <br />
               <span className="text-[#FF2D55]">
-                sin riesgo
+                sin riesgo.
               </span>
             </h2>
 

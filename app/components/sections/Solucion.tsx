@@ -74,7 +74,7 @@ export default function Solucion() {
               </span>
               <br />
               <span className="text-[#FF2D55]">
-                para todos
+                para todos.
               </span>
             </h2>
 

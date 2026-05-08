@@ -435,7 +435,7 @@ export default function DiferencialCTA() {
 
                 mb-8
               ">
-                Descubrí cuánto puede generar tu club
+                Descubrí cuánto puede generar tu club.
               </h3>
 
               {/* SUB */}

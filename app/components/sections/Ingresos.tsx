@@ -184,7 +184,7 @@ export default function Ingresos() {
               </span>
               <br />
               <span className="text-[#FF2D55]">
-                BigFana
+                BigFana.
               </span>
             </h2>
 

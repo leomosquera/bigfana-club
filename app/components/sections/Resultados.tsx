@@ -57,7 +57,7 @@ export default function Resultados() {
           <div className="max-w-2xl mb-20">
 
             <h2 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-4">
-              <span className="text-white">Resultados medibles desde</span> <span className="text-[#FF2D55]">el primer momento</span>
+              <span className="text-white">Resultados medibles desde</span> <span className="text-[#FF2D55]">el primer momento.</span>
             </h2>
 
             <p className="text-white/60 text-lg">
