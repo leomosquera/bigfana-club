@@ -2,6 +2,7 @@
 
 import Container from "@/app/layout/Container";
 import { motion } from "framer-motion";
+import { useEffect, useMemo, useState } from "react";
 
 import {
   BadgeDollarSign,
@@ -46,6 +47,27 @@ const items = [
 ];
 
 export default function Ingresos() {
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const particles = useMemo(() => {
+    return [...Array(5)].map(() =>
+      [...Array(8)].map(() => ({
+        duration: 2.8 + Math.random() * 1.5,
+        delay: Math.random() * 3,
+        width: `${2 + Math.random() * 2}px`,
+        height: `${60 + Math.random() * 80}px`,
+        top: `${Math.random() * 100}%`,
+      }))
+    );
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <section
       id="ingresos"
@@ -92,7 +114,7 @@ export default function Ingresos() {
       {/* CENTER ENERGY PARTICLES */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
-      {[0, 1, 2, 3, 4].map((col) => (
+      {particles.map((column, col) => (
         <div
           key={col}
           className="
@@ -106,7 +128,7 @@ export default function Ingresos() {
           }}
         >
 
-          {[...Array(8)].map((_, i) => (
+          {column.map((particle, i) => (
             <motion.span
               key={i}
               initial={{
@@ -118,9 +140,9 @@ export default function Ingresos() {
                 opacity: [0, 0.8, 0],
               }}
               transition={{
-                duration: 2.8 + Math.random() * 1.5,
+                duration: particle.duration,
                 repeat: Infinity,
-                delay: Math.random() * 3,
+                delay: particle.delay,
                 ease: "linear",
               }}
               className="
@@ -131,9 +153,9 @@ export default function Ingresos() {
                 blur-[2px]
               "
               style={{
-                width: `${2 + Math.random() * 2}px`,
-                height: `${60 + Math.random() * 80}px`,
-                top: `${Math.random() * 100}%`,
+                width: particle.width,
+                height: particle.height,
+                top: particle.top,
               }}
             />
           ))}

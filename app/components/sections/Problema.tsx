@@ -13,23 +13,23 @@ import {
 const items = [
   {
     icon: Users,
-    title: "Fans que el club no conoce",
-    text: "Sin datos propios, cada campaña empieza desde cero.",
+    title: "Tener Fans ≠ Conocerlos",
+    text: "Sin datos propios, realmente conoces a tus fans?",
   },
   {
     icon: BadgeDollarSign,
-    title: "Sponsors con poca trazabilidad",
-    text: "Mucha exposición, poca medición del impacto real.",
+    title: "Inversiones ≠ retorno",
+    text: "Sin metricas concretas, como se mide el retorno sobre inversión?",
   },
   {
     icon: Activity,
-    title: "Engagement que no escala",
-    text: "La pasión existe, pero se queda sin canalizar.",
+    title: "Engagement ≠ escalamiento",
+    text: "A pesar de todas las campañas, realmente se ve un crecimiento en engagement?",
   },
   {
     icon: TrendingDown,
-    title: "Ingresos con techo",
-    text: "Ticketing, merchandising y sponsors necesitan nuevas capas de crecimiento.",
+    title: "Ingresos ≠ máximo potential",
+    text: "Aunque crezcan los ingresos, realmente se está alcanzando el máximo potencial?",
   },
 ];
 
@@ -75,11 +75,11 @@ export default function Problema() {
 
             <h2 className="text-4xl md:text-6xl font-bold leading-[1.05] tracking-tight mb-6">
               <span className="text-white">
-                Siempre tuviste los fans.
+              Siempre tuviste a los fans. 
               </span>
               <br />
               <span className="text-[#FF2D55]">
-                Hoy podés hacer más con ellos.
+              Este es el momento de empezar a hacer más.
               </span>
             </h2>
 
@@ -175,13 +175,6 @@ export default function Problema() {
               );
             })}
 
-          </div>
-
-          {/* CLOSING */}
-          <div className="mt-20 text-center">
-            <p className="text-white/50 text-lg">
-              Sin datos ni conexión real con el fan, el crecimiento tiene un límite.
-            </p>
           </div>
 
         </div>

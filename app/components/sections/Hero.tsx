@@ -49,7 +49,7 @@ export default function Hero() {
             </span>
             <br />
             <span className="text-[#FF2D55]">
-            de tus hinchas
+            de tus fans
             </span>
             <br />
             <span className="text-white">
@@ -59,7 +59,7 @@ export default function Hero() {
 
           {/* SUB */}
           <p className="mt-6 text-lg text-white/70">
-          Para el club que quiere crecer. Para el sponsor que quiere impacto. Para el fan que quiere más.
+          Para el club que quiere crecer. Para el fan que quiere más.
           </p>
 
           {/* CTA */}
@@ -99,6 +99,7 @@ export default function Hero() {
       {/* FLOATING STATS */}
 
       {/* LEFT */}
+      {/*
       <motion.div
         animate={{ y: [0, -12, 0] }}
         transition={{ duration: 5, repeat: Infinity }}
@@ -115,7 +116,7 @@ export default function Hero() {
         <FloatingCard title="Clubes" value="50+" />
       </motion.div>
 
-      {/* RIGHT */}
+      {/* RIGHT 
       <motion.div
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 5.5, repeat: Infinity }}
@@ -131,6 +132,7 @@ export default function Hero() {
       >
         <FloatingCard title="Experiencias" value="300+" />
       </motion.div>
+      */}
 
     </section>
   );
