@@ -9,15 +9,15 @@ import {
 } from "lucide-react";
 
 const leftItems = [
-  "Apps que generan interacción pero no ingresos",
-  "Tokens con baja adopción y alta fricción",
-  "Sistemas aislados sin impacto real",
+  "Apps que generan interacción, pero no ingresos.",
+  "Falta de métricas y segmentación.",
+  "Sistemas aislados sin análisis unificado.",
 ];
 
 const rightItems = [
-  "Monetización directa del fan",
-  "Modelo simple, sin fricción",
-  "Ecosistema integrado que genera valor",
+  "Perfil unificado del fan.",
+  "Datos reales que permiten mayor penetración.",
+  "Modelo simple y escalable.",
 ];
 
 export default function DiferencialCTA() {
@@ -27,7 +27,7 @@ export default function DiferencialCTA() {
       className="
         relative
         overflow-hidden
-        py-32
+        py-36
         bg-black
       "
     >
@@ -100,13 +100,13 @@ export default function DiferencialCTA() {
                 mb-8
               ">
                 <span className="text-white">
-                  No es una app.
+                Diseñado para que cada interacción tenga 
                 </span>
 
                 <br />
 
                 <span className="text-[#FF2D55]">
-                  Es un negocio.
+                un impacto real en el club.
                 </span>
               </h2>
 
@@ -120,8 +120,7 @@ export default function DiferencialCTA() {
                 max-w-2xl
                 mx-auto
               ">
-                BigFana está diseñado para generar ingresos reales,
-                no solo interacción.
+                Mejor experiencia para el fan, más ingresos para el club
               </p>
 
             </motion.div>
@@ -435,7 +434,7 @@ export default function DiferencialCTA() {
 
                 mb-8
               ">
-                Descubrí cuánto puede generar tu club.
+                Descubri lo que Big Fana puede hacer por tu club sus fans.
               </h3>
 
               {/* SUB */}
@@ -448,8 +447,7 @@ export default function DiferencialCTA() {
 
                 mb-10
               ">
-                Te mostramos el potencial económico en base
-                a tu club, tus fans y tu estadio.
+                Una nueva forma de interactuar con el hincha que genera valor real.
               </p>
 
               {/* CTA */}

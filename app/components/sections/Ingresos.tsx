@@ -2,413 +2,466 @@
 
 import Container from "@/app/layout/Container";
 import { motion } from "framer-motion";
-import { useEffect, useMemo, useState } from "react";
-
-import {
-  BadgeDollarSign,
-  ShoppingBag,
-  Ticket,
-  Database,
-} from "lucide-react";
 
 const items = [
   {
-    icon: BadgeDollarSign,
+    phase: "FASE 01",
     number: ".01",
-    title: "Sponsors Data-Driven",
-    text: "Activaciones segmentadas con datos reales del fan.",
-    impact: "Mayor valor comercial y ROI medible",
-    image: "/bigfana-estadio-ingreso-publicidad.jpg",
+    title: "Campañas del club, más rentables",
+    text: "Entradas, abonos, merchandise y socios con segmentación real. Menor costo de adquisición, mayor conversión.",
+    impact: "Genera valor desde el primer mes",
+    featured: true,
   },
   {
-    icon: ShoppingBag,
+    phase: "FASE 02",
     number: ".02",
-    title: "Consumo & E-commerce",
-    text: "Incremento directo del gasto por fan dentro del ecosistema.",
-    impact: "+22% consumo por fan",
-    image: "/bigfana-compra-inmediata.jpg",
+    title: "Sponsors con retorno medible",
+    text: "Activaciones segmentadas por el comportamiento real del fan. Más valor por contrato, mejores renovaciones.",
+    impact: "ROI demostrable para cada sponsor",
   },
   {
-    icon: Ticket,
+    phase: "FASE 03",
     number: ".03",
-    title: "Tickets digitales",
-    text: "Optimización de venta y control total del acceso.",
-    impact: "Hasta +20% en tickets digitales",
-    image: "/bigfana-entrada-qr.jpg",
-  },
-  {
-    icon: Database,
-    number: ".04",
-    title: "Data del fan",
-    text: "Construcción de first-party data propia del club.",
-    impact: "Activo estratégico a largo plazo",
-    image: "/bigfana-analytics.jpg",
+    title: "Nuevas verticales monetizables",
+    text: "Cashless en el estadio, segunda pantalla, merch on-demand. El ecosistema completo del fan.",
+    impact: "Máximo nivel de monetización",
   },
 ];
 
 export default function Ingresos() {
-
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const particles = useMemo(() => {
-    return [...Array(5)].map(() =>
-      [...Array(8)].map(() => ({
-        duration: 2.8 + Math.random() * 1.5,
-        delay: Math.random() * 3,
-        width: `${2 + Math.random() * 2}px`,
-        height: `${60 + Math.random() * 80}px`,
-        top: `${Math.random() * 100}%`,
-      }))
-    );
-  }, []);
-
-  if (!mounted) return null;
-
   return (
     <section
       id="ingresos"
       className="
         relative
-        py-32
         overflow-hidden
         bg-black
+        py-36
       "
     >
 
-      {/* BACKGROUND IMAGE */}
-      <div className="absolute inset-0">
-        <img
-          src="/bigfana-bg-gamificacion-monetizacion.jpg"
-          alt="Gamificación y monetización"
-          className="
-            w-full
-            h-full
-            object-cover
-            object-center
-            opacity-70
-            scale-105
-          "
-        />
-      </div>
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 overflow-hidden bg-[#050505]">
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/100" />
-
-      {/* RED ATMOSPHERE */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,45,85,0.10),transparent_70%)]" />
-
-      {/* DOT GRID */}
-      <div
-        className="
-          absolute
-          inset-0
-          bg-[radial-gradient(rgba(255,45,85,0.08)_1px,transparent_1px)]
-          bg-[size:32px_32px]
-        "
-      />
-
-      {/* CENTER ENERGY PARTICLES */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-
-      {particles.map((column, col) => (
-        <div
-          key={col}
+        {/* RED LIGHT 1 */}
+        <motion.div
+          animate={{
+            x: [-150, 150, -150],
+            y: [-50, 50, -50],
+          }}
+          transition={{
+            duration: 14,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
           className="
             absolute
-            top-0
-            bottom-0
-            left-1/2
+            top-[-200px]
+            left-[-200px]
+
+            h-[700px]
+            w-[700px]
+
+            rounded-full
+
+            bg-[#FF2D55]
+
+            opacity-20
+
+            blur-[120px]
           "
-          style={{
-            transform: `translateX(${(col - 2) * 28}px)`,
+        />
+
+        {/* RED LIGHT 2 */}
+        <motion.div
+          animate={{
+            x: [150, -150, 150],
+            y: [50, -50, 50],
           }}
-        >
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            bottom-[-250px]
+            right-[-200px]
 
-          {column.map((particle, i) => (
-            <motion.span
-              key={i}
-              initial={{
-                y: -300,
-                opacity: 0,
-              }}
-              animate={{
-                y: 2200,
-                opacity: [0, 0.8, 0],
-              }}
-              transition={{
-                duration: particle.duration,
-                repeat: Infinity,
-                delay: particle.delay,
-                ease: "linear",
-              }}
-              className="
-                absolute
-                left-1/2
-                rounded-full
-                bg-[#FF2D55]
-                blur-[2px]
-              "
-              style={{
-                width: particle.width,
-                height: particle.height,
-                top: particle.top,
-              }}
-            />
-          ))}
+            h-[800px]
+            w-[800px]
 
-        </div>
-      ))}
+            rounded-full
 
-      {/* CENTRAL ATMOSPHERE */}
-      <div
-        className="
-          absolute
-          left-1/2
-          top-0
-          h-full
-          w-[240px]
-          -translate-x-1/2
+            bg-[#781020]
 
-          bg-[radial-gradient(circle_at_center,rgba(255,45,85,0.06),transparent_70%)]
+            opacity-25
 
-          blur-[100px]
-        "
-      />
+            blur-[140px]
+          "
+        />
 
-    </div>
+        {/* CENTER LIGHT */}
+        <motion.div
+          animate={{
+            scale: [1, 1.15, 1],
+            opacity: [0.12, 0.22, 0.12],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            left-1/2
+            top-1/2
 
-      {/* RED GLOW */}
-      <div
-        className="
-          absolute
-          top-[-200px]
-          right-[-200px]
-          w-[500px]
-          h-[500px]
-          bg-[#FF2D55]/10
-          blur-[140px]
-        "
-      />
+            h-[500px]
+            w-[900px]
+
+            -translate-x-1/2
+            -translate-y-1/2
+
+            rounded-full
+
+            bg-[#FF2D55]
+
+            blur-[120px]
+          "
+        />
+
+        {/* GRID */}
+        <div
+          className="
+            absolute
+            inset-0
+
+            bg-[radial-gradient(rgba(255,45,85,0.12)_1px,transparent_1px)]
+            bg-[size:34px_34px]
+
+            opacity-20
+          "
+        />
+
+        {/* VIGNETTE */}
+        <div
+          className="
+            absolute
+            inset-0
+
+            bg-[radial-gradient(circle_at_center,transparent_45%,rgba(0,0,0,0.82)_100%)]
+          "
+        />
+
+      </div>
 
       <Container>
+
         <div className="relative z-10">
 
-          {/* HEADER */}
-          <div className="max-w-3xl mx-auto text-center mb-28">
+          {/* SECTION TAG */}
+          <div className="flex justify-center mb-8">
 
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] mb-6">
-              <span className="text-white">
-                Cómo genera ingresos
+            <div
+              className="
+                inline-flex
+                items-center
+                gap-3
+
+                rounded-2xl
+
+                border
+                border-[#5A1524]
+
+                bg-[#20060B]
+
+                px-6
+                py-3
+              "
+            >
+
+              <div className="
+                h-2
+                w-2
+                rounded-full
+                bg-[#FF2D55]
+              " />
+
+              <span className="
+                text-[#FF2D55]
+
+                text-sm
+                font-semibold
+
+                uppercase
+                tracking-[0.35em]
+              ">
+                Ingresos
               </span>
-              <br />
+
+            </div>
+
+          </div>
+
+          {/* TITLE */}
+          <div className="max-w-5xl mx-auto mb-16 text-center">
+
+            <h2 className="
+              text-4xl
+              md:text-6xl
+
+              font-bold
+
+              tracking-tight
+              leading-[1.05]
+
+              text-white
+
+              mb-6
+            ">
+
+              Cómo BigFana{" "}
+
               <span className="text-[#FF2D55]">
-                BigFana.
+                genera ingresos
               </span>
+
+              {" "}para el club.
+
             </h2>
 
-            <p className="text-white/60 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-              Cada módulo impacta directamente en la facturación del club.
+            <p className="
+              text-white/60
+              text-lg
+              md:text-xl
+              leading-relaxed
+              max-w-3xl
+              mx-auto
+            ">
+              Monetización inteligente y engagement conectado en una única plataforma premium para el fan.
             </p>
 
           </div>
 
-          {/* BLOCKS */}
-          <div className="relative flex flex-col gap-16 md:gap-20">
+          {/* CARDS */}
+          <div
+            className="
+              grid
+              gap-6
+              md:grid-cols-3
+            "
+          >
 
-            {items.map((item, index) => {
-              const Icon = item.icon;
+            {items.map((item, index) => (
+              <motion.div
+                key={item.number}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.55,
+                  delay: index * 0.08,
+                }}
+                className={`
+                  group
+                  relative
 
-              return (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className="
-                    relative
-                    grid
-                    md:grid-cols-2
-                    gap-14
-                    items-center
-                  "
-                >
+                  flex
+                  flex-col
 
-                  {/* TEXT */}
-                  <div
-                    className={`
-                      relative
-                      z-10
+                  h-full
+                  overflow-hidden
 
-                      ${index % 2 !== 0 ? "md:order-2" : ""}
-                    `}
-                  >
+                  rounded-3xl
 
-                    {/* ICON */}
-                    <div className="
-                      mb-6
-                      flex
-                      size-16
-                      items-center
-                      justify-center
-                      rounded-2xl
+                  border
 
-                      border border-[#5A1524]
-                      bg-[#20060B]
+                  transition-all
+                  duration-500
 
-                      shadow-[0_0_30px_rgba(120,10,30,0.18)]
+                  ${
+                    item.featured
+                      ? "border-[#5A1524]"
+                      : "border-[#3A0D16]"
+                  }
 
-                      transition-all duration-200
+                  bg-[#080808]
 
-                      hover:scale-110
-                      hover:shadow-[0_0_35px_rgba(120,10,30,0.28)]
-                    ">
-                      <Icon className="size-8 text-[#FF2D55]" />
+                  hover:border-[#FF2D55]/30
+
+                  ${
+                    item.featured
+                      ? "hover:shadow-[0_0_60px_rgba(120,10,30,0.35)]"
+                      : "hover:shadow-[0_0_40px_rgba(120,10,30,0.18)]"
+                  }
+                `}
+              >
+
+                {/* TOP GLOW */}
+                <div
+                  className={`
+                    absolute
+                    inset-x-0
+                    top-0
+                    h-[2px]
+
+                    ${
+                      item.featured
+                        ? "bg-[#FF2D55]"
+                        : "bg-[#5A1524]"
+                    }
+                  `}
+                />
+
+                {/* CONTENT */}
+                <div className="
+                  relative
+                  p-7
+
+                  flex-1
+                ">
+
+                  {/* HEADER */}
+                  <div className="
+                    flex
+                    items-start
+                    justify-between
+                    mb-10
+                  ">
+
+                    <div
+                      className="
+                        rounded-2xl
+                        border
+                        border-[#5A1524]
+
+                        bg-[#20060B]
+
+                        px-4
+                        py-2
+                      "
+                    >
+
+                      <span className="
+                        text-[11px]
+                        uppercase
+                        tracking-[0.35em]
+                        text-[#FF2D55]
+                        font-semibold
+                      ">
+                        {item.phase}
+                      </span>
+
                     </div>
 
-                    {/* TITLE */}
-                    <h3 className="
-                      text-3xl
-                      md:text-4xl
-                      font-semibold
-                      text-white
-                      mb-5
-                      tracking-tight
-                      leading-tight
-                    ">
-                      {item.title}
-                    </h3>
+                    <span
+                      className={`
+                        text-[56px]
+                        font-black
+                        leading-none
+                        tracking-[-0.06em]
 
-                    {/* TEXT */}
-                    <p className="
-                      text-white/60
-                      text-lg
-                      leading-relaxed
-                      mb-6
-                      max-w-xl
-                    ">
-                      {item.text}
-                    </p>
-
-                    {/* IMPACT */}
-                    <p className="
-                      text-[#FF2D55]
-                      font-semibold
-                      text-xl
-                    ">
-                      {item.impact}
-                    </p>
+                        ${
+                          item.featured
+                            ? "text-[#FF2D55]"
+                            : "text-white/90"
+                        }
+                      `}
+                    >
+                      {item.number}
+                    </span>
 
                   </div>
 
-                  {/* IMAGE */}
-                  <motion.div
-                    whileHover={{
-                      scale: 1.025,
-                    }}
-                    transition={{
-                      scale: {
-                        duration: 0.12,
-                        ease: "easeOut",
-                      },
-                    }}
-                    className={`
-                      group
-                      relative
-                      z-10
+                  {/* TITLE */}
+                  <h3 className="
+                    text-3xl
+                    md:text-4xl
 
-                      h-[280px]
-                      md:h-[380px]
+                    font-semibold
 
-                      overflow-hidden
-                      rounded-[34px]
+                    tracking-tight
+                    leading-tight
 
-                      border-[3px] border-[#6B1224]
+                    text-white
 
-                      transition-[border-color,box-shadow,transform]
-                      duration-200
+                    mb-6
+                  ">
+                    {item.title}
+                  </h3>
 
-                      hover:border-[#FF2D55]/60
+                  {/* TEXT */}
+                  <p className="
+                    text-white/55
+                    text-lg
+                    leading-relaxed
+                  ">
+                    {item.text}
+                  </p>
 
-                      shadow-[0_0_0_1px_rgba(255,45,85,0.15),0_0_45px_rgba(120,10,30,0.35),0_0_120px_rgba(120,10,30,0.22)]
+                </div>
 
-                      hover:shadow-[0_0_0_2px_rgba(255,45,85,0.18),0_0_45px_rgba(255,45,85,0.45),0_0_120px_rgba(120,10,30,0.30)]
+                {/* FOOTER */}
+                <div
+                  className={`
+                    border-t
+                
+                    px-7
+                    py-5
+                
+                    ${
+                      item.featured
+                        ? "bg-[#FF2D55] border-[#FF2D55]"
+                        : "bg-[#120306] border-[#3A0D16]"
+                    }
+                  `}
+                >
 
-                      ${index % 2 !== 0 ? "md:order-1" : ""}
-                    `}
-                  >
+                  <p className="
+                    text-white
+                    font-medium
+                    text-lg
+                    tracking-tight
+                  ">
+                    {item.impact}
+                  </p>
 
-                    {/* OUTER NEON RING */}
-                    <div className="
-                      absolute
-                      inset-[-2px]
-                      rounded-[36px]
+                </div>
 
-                      border-2 border-[#FF2D55]/25
+              </motion.div>
+            ))}
 
-                      opacity-90
+          </div>
 
-                      blur-[2px]
+          {/* FOOTER CLAIM */}
+          <div className="mt-16 text-center">
 
-                      transition-all duration-200
+            <p className="
+              text-white/65
+              text-xl
+              md:text-xl
+              italic
+              tracking-tight
+            ">
+              Cada interacción del fan =
+              <span className="text-[#FF2D55] font-semibold">
+                {" "}una nueva oportunidad de monetización medible.
+              </span>
+            </p>
 
-                      group-hover:opacity-100
-                      group-hover:border-[#FF2D55]/40
-                    " />
-
-                    {/* IMAGE */}
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="
-                        w-full
-                        h-full
-                        object-cover
-                      "
-                    />
-
-                    {/* OVERLAY */}
-                    <div className="absolute inset-0 bg-black/25" />
-
-                    {/* RED ATMOSPHERE */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,45,85,0.18),transparent_70%)]" />
-
-                    {/* BIG NUMBER */}
-                    <div className="
-                      absolute
-                      bottom-6
-                      right-6
-
-                      text-[90px]
-                      md:text-[120px]
-
-                      font-bold
-                      tracking-tight
-                      leading-none
-
-                      text-white/[0.06]
-
-                      transition-all duration-300
-
-                      group-hover:text-[#FF2D55]/[0.12]
-                    ">
-                      {item.number}
-                    </div>
-
-                  </motion.div>
-
-                </motion.div>
-              );
-            })}
-
-</div>
+          </div>
 
         </div>
+
       </Container>
+
     </section>
   );
 }

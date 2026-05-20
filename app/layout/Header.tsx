@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 
 const links = [
+  { label: "Problema", href: "#problema" },
   { label: "Cómo funciona", href: "#solucion" },
   { label: "Ingresos", href: "#ingresos" },
-  { label: "Resultados", href: "#resultados" },
+  { label: "Ecosistema", href: "#ecosistema" },
 ];
 
 export default function Header() {
