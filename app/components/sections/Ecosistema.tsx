@@ -159,7 +159,7 @@ export default function Ecosistema() {
 
               <div className="p-8">
 
-                {/* LABEL */}
+                {/* LABEL
                 <div className="
                   inline-flex
                   items-center
@@ -188,6 +188,7 @@ export default function Ecosistema() {
                   </span>
 
                 </div>
+                 */}
 
                 {/* TITLE */}
                 <h3 className="
@@ -320,7 +321,7 @@ export default function Ecosistema() {
               {/* TOP */}
               <div className="p-8 md:p-10">
 
-                {/* LABEL */}
+                {/* LABEL 
                 <div className="
                   inline-flex
                   items-center
@@ -342,6 +343,7 @@ export default function Ecosistema() {
                   </span>
 
                 </div>
+                */}
 
                 {/* TITLE */}
                 <h3 className="
@@ -357,7 +359,7 @@ export default function Ecosistema() {
 
                   mb-4
                 ">
-                  Solución final
+                  Solución final: 
                   <br />
                   Ecosistema para el fan
                 </h3>
@@ -373,7 +375,7 @@ export default function Ecosistema() {
                   Plataforma de engagement y monetización ampliada a medida.
                 </p>
 
-                {/* FEATURES */}
+                {/* FEATURES 
                 <div className="
                   flex
                   flex-wrap
@@ -411,6 +413,7 @@ export default function Ecosistema() {
                   ))}
 
                 </div>
+                */}
 
                 {/* DIAGRAM */}
                 <div

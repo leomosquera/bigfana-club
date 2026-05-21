@@ -77,17 +77,49 @@ export default function DiferencialCTA() {
               transition={{ duration: 0.5 }}
             >
 
-              <p className="
-                mb-6
+              {/* SECTION TAG */}
+          <div className="flex justify-center mb-8">
 
+            <div
+              className="
+                inline-flex
+                items-center
+                gap-3
+
+                rounded-2xl
+
+                border
+                border-[#5A1524]
+
+                bg-[#20060B]
+
+                px-6
+                py-3
+              "
+            >
+
+              <div className="
+                h-2
+                w-2
+                rounded-full
+                bg-[#FF2D55]
+              " />
+
+              <span className="
                 text-[#FF2D55]
+
                 text-sm
+                font-semibold
+
                 uppercase
                 tracking-[0.35em]
-                font-semibold
               ">
-                El diferencial
-              </p>
+                El Diferencial
+              </span>
+
+            </div>
+
+          </div>
 
               <h2 className="
                 text-4xl
