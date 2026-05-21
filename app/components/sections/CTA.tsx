@@ -434,7 +434,7 @@ export default function DiferencialCTA() {
 
                 mb-8
               ">
-                Descubri lo que Big Fana puede hacer por tu club sus fans.
+                Descubre lo que BigFana puede hacer por tu club y sus fans.
               </h3>
 
               {/* SUB */}
@@ -447,7 +447,7 @@ export default function DiferencialCTA() {
 
                 mb-10
               ">
-                Una nueva forma de interactuar con el hincha que genera valor real.
+                Una nueva forma de interactuar con el fan que genera valor real.
               </p>
 
               {/* CTA */}

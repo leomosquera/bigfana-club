@@ -8,7 +8,7 @@ const items = [
     phase: "FASE 01",
     number: ".01",
     title: "Campañas del club, más rentables",
-    text: "Entradas, abonos, merchandise y socios con segmentación real. Menor costo de adquisición, mayor conversión.",
+    text: "Aumenta la rentabilidad de tus campañas de entradas, abonos, merchandise y membresías gracias a una segmentación basada en el comportamiento real del fan. Resultado: menor costo de adquisición y mayor tasa de conversión.",
     impact: "Genera valor desde el primer mes",
     featured: true,
   },

@@ -18,7 +18,7 @@ const items = [
   {
     icon: Database,
     title: "Datos propios y accionables",
-    text: "Construí tu propio activo de datos y tomá decisiones basadas en comportamiento real.",
+    text: "Construye tu propio activo de datos y toma decisiones basadas en comportamiento real.",
   },
   {
     icon: BadgeDollarSign,
@@ -123,7 +123,7 @@ export default function Solucion() {
             </h2>
 
             <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            BigFana transforma interacción, datos y comunidad, en valor tangible para club y sus fans.
+            BigFana transforma interacción, datos y comunidad en valor tangible para el club y sus fans.
             </p>
 
           </div>

@@ -9,7 +9,18 @@ import {
   Vote,
   Newspaper,
   ChevronRight,
+  Ticket,
+  Star,
+  UserRound,
+  MonitorPlay,
+  Users,
+  CreditCard,
+  Crown,
+  ShoppingBag,
+  Shirt,
+  ShieldCheck,
 } from "lucide-react";
+
 
 export default function Ecosistema() {
   return (
@@ -192,7 +203,7 @@ export default function Ecosistema() {
 
                   mb-6
                 ">
-                  Por donde empezar
+                  ¿Por dónde empezar?
                   <br />
                   Plataforma digital
                 </h3>
@@ -204,7 +215,7 @@ export default function Ecosistema() {
                   leading-relaxed
                   mb-10
                 ">
-                  Comenzamos a construir el perfil unificado del hincha a través de Encuestas, Sorteos, Noticias y Votaciones.
+                  Comenzamos a construir el perfil unificado del fan a través de Encuestas, Sorteos, Noticias y Votaciones.
                 </p>
 
                 {/* FEATURES */}
@@ -401,26 +412,814 @@ export default function Ecosistema() {
 
                 </div>
 
-                {/* IMAGE */}
-                <div className="
-                  relative
-                  overflow-hidden
-                ">
+                {/* DIAGRAM */}
+                <div
+  className="
+    relative
 
-                  <img
-                    src="/ecosistema.png"
-                    alt="Ecosistema BigFana"
-                    className="
-                      w-full
-                      h-[420px]
-                      object-cover
-                      object-center
-                    "
-                  />
+    h-[980px]
+    lg:h-[760px]
 
-                  {/* OVERLAY */}
+    overflow-hidden
 
-                </div>
+    rounded-[40px]
+
+    border
+    border-white/10
+
+    bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]
+
+    backdrop-blur-xl
+  "
+>
+
+  {/* BACKGROUND */}
+  <div className="
+    absolute
+    inset-0
+    bg-[radial-gradient(circle_at_left,rgba(255,45,85,0.10),transparent_40%)]
+  " />
+
+  <div className="
+    absolute
+    inset-0
+    bg-[radial-gradient(circle_at_right,rgba(255,255,255,0.05),transparent_45%)]
+  " />
+
+  {/* GRID */}
+  <div
+    className="
+      absolute
+      inset-0
+
+      bg-[radial-gradient(rgba(255,255,255,0.025)_1px,transparent_1px)]
+      bg-[size:28px_28px]
+
+      opacity-40
+    "
+  />
+
+  {/* LABELS */}
+  <div className="
+    absolute
+
+    top-10
+    left-1/2
+    -translate-x-1/2
+
+    lg:left-12
+    lg:translate-x-0
+
+    text-[#FF2D55]
+
+    text-xs
+    lg:text-sm
+
+    font-semibold
+
+    tracking-[0.35em]
+    uppercase
+  ">
+    Engagement
+  </div>
+
+  <div className="
+    absolute
+
+    top-[86%]
+    left-1/2
+    -translate-x-1/2
+
+    lg:top-10
+    lg:right-12
+    lg:left-auto
+    lg:translate-x-0
+
+    text-white/40
+
+    text-xs
+    lg:text-sm
+
+    font-semibold
+
+    tracking-[0.35em]
+    uppercase
+  ">
+    Monetización
+  </div>
+
+  {/* MOBILE/TABLET SHAPES */}
+  <div className="lg:hidden">
+
+    {/* TOP */}
+    <div
+      className="
+        absolute
+
+        left-1/2
+        top-[8%]
+
+        h-[32%]
+        w-[82%]
+
+        -translate-x-1/2
+
+        rounded-[42px]
+
+        border-2
+        border-[#FF2D55]
+
+        shadow-[0_0_80px_rgba(255,45,85,0.08)]
+      "
+    />
+
+    {/* CENTER */}
+    <div
+      className="
+        absolute
+
+        left-1/2
+        top-[38%]
+
+        h-[18%]
+        w-[80%]
+
+        -translate-x-1/2
+
+        rounded-[36px]
+
+        border
+        border-white/10
+
+        bg-white/[0.04]
+
+        backdrop-blur-xl
+      "
+    />
+
+    {/* BOTTOM */}
+    <div
+      className="
+        absolute
+
+        left-1/2
+        top-[54%]
+
+        h-[30%]
+        w-[82%]
+
+        -translate-x-1/2
+
+        rounded-[42px]
+
+        border-2
+        border-white/20
+      "
+    />
+
+  </div>
+
+  {/* DESKTOP SHAPES */}
+  <div className="hidden lg:block">
+
+    {/* LEFT SHAPE */}
+    <div
+      className="
+        absolute
+
+        left-[3%]
+        top-[16%]
+
+        w-[60%]
+        h-[60%]
+
+        rounded-[38%]
+
+        border-2
+        border-[#FF2D55]
+
+        shadow-[0_0_80px_rgba(255,45,85,0.08)]
+      "
+    />
+
+    {/* RIGHT SHAPE */}
+    <div
+      className="
+        absolute
+
+        right-[3%]
+        top-[16%]
+
+        w-[60%]
+        h-[60%]
+
+        rounded-[38%]
+
+        border-2
+        border-white/20
+      "
+    />
+
+  </div>
+
+  {/* CONTENT */}
+  <div className="absolute inset-0">
+
+    {/* MOBILE/TABLET */}
+    <div className="lg:hidden">
+
+      {/* ENGAGEMENT */}
+      <div className="
+        absolute
+        top-[12%]
+        left-1/2
+        -translate-x-1/2
+
+        grid
+        grid-cols-3
+        gap-x-14
+        gap-y-7
+      ">
+
+        {[
+          {
+            title: "Acceso\nal estadio",
+            icon: Ticket,
+          },
+          {
+            title: "Fan\ntokens",
+            icon: Star,
+          },
+          {
+            title: "ADN\ndel fan",
+            icon: UserRound,
+          },
+          {
+            title: "Realidad\naumentada",
+            icon: Smartphone,
+          },
+          {
+            title: "Segunda\npantalla",
+            icon: MonitorPlay,
+          },
+          {
+            title: "Watch\nparty",
+            icon: Users,
+          },
+        ].map((item) => (
+          <div
+            key={item.title}
+            className="
+              flex
+              flex-col
+              items-center
+              text-center
+            "
+          >
+
+            <div className="
+              flex
+              h-14
+              w-14
+              items-center
+              justify-center
+
+              rounded-2xl
+
+              border
+              border-white/8
+
+              bg-black/30
+
+              backdrop-blur-md
+            ">
+
+              <item.icon
+                className="size-5 text-[#FF2D55]"
+                strokeWidth={1.8}
+              />
+
+            </div>
+
+            <div className="
+              mt-3
+
+              whitespace-pre-line
+
+              text-white
+
+              text-[13px]
+              font-medium
+              leading-tight
+            ">
+              {item.title}
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+
+      {/* CENTER */}
+      <div className="
+        absolute
+        top-[42%]
+        left-1/2
+        -translate-x-1/2
+
+        flex
+        gap-12
+      ">
+
+        {[
+          {
+            title: "Consumo\ncashless",
+            icon: CreditCard,
+          },
+          {
+            title: "Experiencias\nPremium",
+            icon: Crown,
+          },
+        ].map((item) => (
+          <div
+            key={item.title}
+            className="
+              flex
+              flex-col
+              items-center
+              text-center
+            "
+          >
+
+            <div className="
+              flex
+              h-16
+              w-16
+              items-center
+              justify-center
+
+              rounded-2xl
+
+              border
+              border-white/10
+
+              bg-white/[0.05]
+
+              backdrop-blur-md
+            ">
+
+              <item.icon
+                className="size-6 text-[#FF2D55]"
+                strokeWidth={1.8}
+              />
+
+            </div>
+
+            <div className="
+              mt-3
+
+              whitespace-pre-line
+
+              text-white
+
+              text-[14px]
+              font-medium
+              leading-tight
+            ">
+              {item.title}
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+
+      {/* MONETIZATION */}
+      <div className="
+        absolute
+        top-[58%]
+        left-1/2
+        -translate-x-1/2
+
+        flex
+        flex-col
+        items-center
+        gap-y-12
+      ">
+
+        {/* ROW */}
+        <div className="flex gap-x-10">
+
+          {[
+            {
+              title: "Venta de\nmerchandising",
+              icon: ShoppingBag,
+            },
+            {
+              title: "Merchandising\nbajo demanda",
+              icon: Shirt,
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="
+                flex
+                flex-col
+                items-center
+                text-center
+              "
+            >
+
+              <div className="
+                flex
+                h-14
+                w-14
+                items-center
+                justify-center
+
+                rounded-2xl
+
+                border
+                border-white/8
+
+                bg-black/30
+
+                backdrop-blur-md
+              ">
+
+                <item.icon
+                  className="size-5 text-[#FF2D55]"
+                  strokeWidth={1.8}
+                />
+
+              </div>
+
+              <div className="
+                mt-3
+
+                whitespace-pre-line
+
+                text-white
+
+                text-[13px]
+                font-medium
+                leading-tight
+              ">
+                {item.title}
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+        {/* SINGLE CENTER */}
+        <div
+          className="
+            -mt-6
+            
+            flex
+            flex-col
+            items-center
+            text-center
+          "
+        >
+
+          <div className="
+            flex
+            h-14
+            w-14
+            items-center
+            justify-center
+
+            rounded-2xl
+
+            border
+            border-white/8
+
+            bg-black/30
+
+            backdrop-blur-md
+          ">
+
+            <ShieldCheck
+              className="size-5 text-[#FF2D55]"
+              strokeWidth={1.8}
+            />
+
+          </div>
+
+          <div className="
+            mt-3
+
+            whitespace-pre-line
+
+            text-white
+
+            text-[13px]
+            font-medium
+            leading-tight
+          ">
+            {"Seguros y\npréstamos"}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* DESKTOP */}
+    <div className="hidden lg:block">
+
+      {/* LEFT */}
+      {[
+        {
+          title: "Acceso\nal estadio",
+          icon: Ticket,
+          top: "26%",
+          left: "12%",
+        },
+        {
+          title: "Fan\ntokens",
+          icon: Star,
+          top: "20%",
+          left: "27%",
+        },
+        {
+          title: "ADN\ndel fan",
+          icon: UserRound,
+          top: "42%",
+          left: "8%",
+        },
+        {
+          title: "Realidad\naumentada",
+          icon: Smartphone,
+          top: "38%",
+          left: "23%",
+        },
+        {
+          title: "Segunda\npantalla",
+          icon: MonitorPlay,
+          top: "57%",
+          left: "13%",
+        },
+        {
+          title: "Watch\nparty",
+          icon: Users,
+          top: "56%",
+          left: "27%",
+        },
+      ].map((item) => (
+        <div
+          key={item.title}
+          className="absolute"
+          style={{
+            top: item.top,
+            left: item.left,
+          }}
+        >
+
+          <div className="
+            flex
+            flex-col
+            items-center
+            text-center
+          ">
+
+            <div className="
+              flex
+              h-14
+              w-14
+              items-center
+              justify-center
+
+              rounded-2xl
+
+              border
+              border-white/8
+
+              bg-black/30
+
+              backdrop-blur-md
+            ">
+
+              <item.icon
+                className="size-5 text-[#FF2D55]"
+                strokeWidth={1.8}
+              />
+
+            </div>
+
+            <div className="
+              mt-3
+
+              whitespace-pre-line
+
+              text-white
+
+              text-[13px]
+              font-medium
+              leading-tight
+            ">
+              {item.title}
+            </div>
+
+          </div>
+
+        </div>
+      ))}
+
+      {/* CENTER */}
+      {[
+        {
+          title: "Consumo\ncashless",
+          icon: CreditCard,
+          top: "30%",
+        },
+        {
+          title: "Experiencias\nPremium",
+          icon: Crown,
+          top: "50%",
+        },
+      ].map((item) => (
+        <div
+          key={item.title}
+          className="
+            absolute
+            left-1/2
+            -translate-x-1/2
+          "
+          style={{
+            top: item.top,
+          }}
+        >
+
+          <div className="
+            flex
+            flex-col
+            items-center
+            text-center
+          ">
+
+            <div className="
+              flex
+              h-16
+              w-16
+              items-center
+              justify-center
+
+              rounded-2xl
+
+              border
+              border-white/10
+
+              bg-white/[0.05]
+
+              backdrop-blur-md
+            ">
+
+              <item.icon
+                className="size-6 text-[#FF2D55]"
+                strokeWidth={1.8}
+              />
+
+            </div>
+
+            <div className="
+              mt-3
+
+              whitespace-pre-line
+
+              text-white
+
+              text-[14px]
+              font-medium
+              leading-tight
+            ">
+              {item.title}
+            </div>
+
+          </div>
+
+        </div>
+      ))}
+
+      {/* RIGHT */}
+      {[
+        {
+          title: "Venta de\nmerchandising",
+          icon: ShoppingBag,
+          top: "21%",
+          right: "22%",
+        },
+        {
+          title: "Merchandising\nbajo demanda",
+          icon: Shirt,
+          top: "39%",
+          right: "10%",
+        },
+        {
+          title: "Seguros y\npréstamos",
+          icon: ShieldCheck,
+          top: "59%",
+          right: "22%",
+        },
+      ].map((item) => (
+        <div
+          key={item.title}
+          className="absolute"
+          style={{
+            top: item.top,
+            right: item.right,
+          }}
+        >
+
+          <div className="
+            flex
+            flex-col
+            items-center
+            text-center
+          ">
+
+            <div className="
+              flex
+              h-14
+              w-14
+              items-center
+              justify-center
+
+              rounded-2xl
+
+              border
+              border-white/8
+
+              bg-black/30
+
+              backdrop-blur-md
+            ">
+
+              <item.icon
+                className="size-5 text-[#FF2D55]"
+                strokeWidth={1.8}
+              />
+
+            </div>
+
+            <div className="
+              mt-3
+
+              whitespace-pre-line
+
+              text-white
+
+              text-[13px]
+              font-medium
+              leading-tight
+            ">
+              {item.title}
+            </div>
+
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+
+    {/* MORE */}
+    <div className="
+      absolute
+
+      bottom-8
+      left-1/2
+      -translate-x-1/2
+
+      lg:left-auto
+      lg:translate-x-0
+      lg:right-16
+      lg:bottom-10
+
+      text-white
+      text-xl
+      font-medium
+
+      whitespace-nowrap
+    ">
+
+      <span className="text-[#FF2D55] mr-3">
+        +
+      </span>
+
+      y mucho más...
+
+    </div>
+
+  </div>
+
+</div>
+
+
 
               </div>
 

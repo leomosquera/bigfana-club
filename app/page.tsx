@@ -1,6 +1,6 @@
 import Header from "@/app/layout/Header";
 import Hero from "@/app/components/sections/Hero";
-import Problema from "@/app/components/sections/Problema";
+import Oportunidad from "@/app/components/sections/Oportunidad";
 import Solucion from "@/app/components/sections/Solucion";
 import Ingresos from "@/app/components/sections/Ingresos";
 import Ecosistema from "@/app/components/sections/Ecosistema";
@@ -14,7 +14,7 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <Problema />
+      <Oportunidad />
       <Solucion />
       <Ingresos />
       <Ecosistema />

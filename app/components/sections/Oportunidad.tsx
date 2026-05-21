@@ -7,36 +7,36 @@ import {
   Users,
   BadgeDollarSign,
   Activity,
-  TrendingDown,
+  TrendingUp,
 } from "lucide-react";
 
 const items = [
   {
     icon: Users,
     title: "Tener Fans ≠ Conocerlos",
-    text: "Sin datos propios, realmente conoces a tus fans?",
+    text: "¿Sin datos propios, realmente conoces a tus fans?",
   },
   {
     icon: BadgeDollarSign,
     title: "Inversiones ≠ retorno",
-    text: "Sin metricas concretas, como se mide el retorno sobre inversión?",
+    text: "Sin métricas concretas, ¿cómo se mide el retorno sobre inversión?",
   },
   {
     icon: Activity,
     title: "Engagement ≠ escalamiento",
-    text: "A pesar de todas las campañas, realmente se ve un crecimiento en engagement?",
+    text: "¿A pesar de todas las campañas, realmente se ve un crecimiento en engagement?",
   },
   {
-    icon: TrendingDown,
-    title: "Ingresos ≠ máximo potential",
-    text: "Aunque crezcan los ingresos, realmente se está alcanzando el máximo potencial?",
+    icon: TrendingUp,
+    title: "Ingresos ≠ máximo potencial",
+    text: "¿Aunque crezcan los ingresos, realmente se está alcanzando el máximo potencial?",
   },
 ];
 
-export default function Problema() {
+export default function Oportunidad() {
   return (
     <section
-      id="problema"
+      id="oportunidad"
       className="
         relative
         py-32
@@ -72,48 +72,48 @@ export default function Problema() {
         <div className="relative z-10">
 
           {/* SECTION TAG */}
-  <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-8">
 
-<div
-  className="
-    inline-flex
-    items-center
-    gap-3
+            <div
+              className="
+                inline-flex
+                items-center
+                gap-3
 
-    rounded-2xl
+                rounded-2xl
 
-    border
-    border-[#5A1524]
+                border
+                border-[#5A1524]
 
-    bg-[#20060B]
+                bg-[#20060B]
 
-    px-6
-    py-3
-  "
->
+                px-6
+                py-3
+              "
+            >
 
-  <div className="
-    h-2
-    w-2
-    rounded-full
-    bg-[#FF2D55]
-  " />
+              <div className="
+                h-2
+                w-2
+                rounded-full
+                bg-[#FF2D55]
+              " />
 
-  <span className="
-    text-[#FF2D55]
+              <span className="
+                text-[#FF2D55]
 
-    text-sm
-    font-semibold
+                text-sm
+                font-semibold
 
-    uppercase
-    tracking-[0.35em]
-  ">
-    Problema
-  </span>
+                uppercase
+                tracking-[0.35em]
+              ">
+                Oportunidad
+              </span>
 
-</div>
+            </div>
 
-</div>
+          </div>
 
           {/* HEADER */}
           <div className="max-w-3xl mx-auto text-center mb-20">

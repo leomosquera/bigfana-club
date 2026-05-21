@@ -32,9 +32,44 @@ export default function Hero() {
         <div className="relative z-20">
 
           {/* EPIGRAPH */}
-          <div className="flex items-center justify-center gap-2 text-xs tracking-[0.2em] text-[#FF2D55]/80 uppercase mb-6">
+          <div className="flex flex-col items-center justify-center mb-8">
+
+          {/* LOGO */}
+          <img
+            src="/logo-bigfana.png"
+            alt="BigFana"
+            className="
+              h-14
+              md:h-18
+              w-auto
+
+              mb-6
+
+              drop-shadow-[0_0_30px_rgba(255,45,85,0.18)]
+            "
+          />
+
+          {/* LABEL */}
+          <div className="
+            flex
+            items-center
+            justify-center
+            gap-2
+
+            text-xs
+            tracking-[0.2em]
+            text-[#FF2D55]/80
+            uppercase
+          ">
+
             <span className="h-px w-6 bg-[#FF2D55]" />
-            <span>Fan engagement platform</span>
+
+            <span>
+              Fan engagement platform
+            </span>
+
+          </div>
+
           </div>
 
           {/* TITLE */}
@@ -45,7 +80,7 @@ export default function Hero() {
             className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.02]"
           >
             <span className="text-white">
-            Transformá la pasión 
+            Transforma la pasión 
             </span>
             <br />
             <span className="text-[#FF2D55]">
@@ -89,9 +124,11 @@ export default function Hero() {
           </div>
 
           {/* STATS BASE */}
+          {/*
           <div className="mt-10 flex justify-center">
             <HeroStats />
           </div>
+          */}
 
         </div>
       </Container>
