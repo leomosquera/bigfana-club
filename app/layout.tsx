@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Sora } from "next/font/google";
+import { DemoModalProvider } from "@/app/components/demo/DemoModalProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,9 +33,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sora.variable} h-full antialiased`}
+      className={`${sora.variable} h-full overflow-x-hidden antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col overflow-x-hidden">
+        <DemoModalProvider>{children}</DemoModalProvider>
+      </body>
     </html>
   );
 }

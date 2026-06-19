@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useDemoModal } from "@/app/components/demo/DemoModalProvider";
 
 const links = [
   { label: "Oportunidad", href: "#oportunidad" },
@@ -10,6 +11,7 @@ const links = [
 ];
 
 export default function Header() {
+  const { openDemoModal } = useDemoModal();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -57,7 +59,11 @@ export default function Header() {
           <div className="flex items-center gap-4">
             
             {/* CTA */}
-            <button className="hidden md:block h-10 px-5 rounded-lg bg-[#FF2D55] text-sm font-semibold text-white hover:opacity-90 transition">
+            <button
+              type="button"
+              onClick={openDemoModal}
+              className="hidden md:block h-10 px-5 rounded-lg bg-[#FF2D55] text-sm font-semibold text-white hover:opacity-90 transition"
+            >
               Agendar demo
             </button>
 
@@ -86,7 +92,14 @@ export default function Header() {
             </a>
           ))}
 
-          <button className="mt-4 h-12 px-6 rounded-xl bg-[#FF2D55] font-semibold">
+          <button
+            type="button"
+            onClick={() => {
+              setMobileOpen(false);
+              openDemoModal();
+            }}
+            className="mt-4 h-12 px-6 rounded-xl bg-[#FF2D55] font-semibold"
+          >
             Agendar demo
           </button>
         </div>

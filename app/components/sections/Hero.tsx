@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 import HeroStats from "@/app/components/sections/HeroStats";
 import FloatingCard from "@/app/components/FloatingCard";
 import ParticlesBG from "@/app/components/ParticlesBG";
+import { useDemoModal } from "@/app/components/demo/DemoModalProvider";
 
 export default function Hero() {
+  const { openDemoModal } = useDemoModal();
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden text-center">
 
@@ -100,7 +102,10 @@ export default function Hero() {
           {/* CTA */}
           <div className="flex justify-center gap-4 mt-8 flex-wrap">
 
-            <button className="
+            <button
+              type="button"
+              onClick={openDemoModal}
+              className="
               h-12 px-6 rounded-xl
               bg-[#FF2D55]
               font-semibold text-white

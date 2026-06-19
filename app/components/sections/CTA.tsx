@@ -7,6 +7,7 @@ import {
   X,
   Check,
 } from "lucide-react";
+import { useDemoModal } from "@/app/components/demo/DemoModalProvider";
 
 const leftItems = [
   "Apps que generan interacción, pero no ingresos.",
@@ -21,6 +22,8 @@ const rightItems = [
 ];
 
 export default function DiferencialCTA() {
+  const { openDemoModal } = useDemoModal();
+
   return (
     <section
       id="cta"
@@ -484,6 +487,8 @@ export default function DiferencialCTA() {
 
               {/* CTA */}
               <button
+                type="button"
+                onClick={openDemoModal}
                 className="
                   h-14
                   px-10
